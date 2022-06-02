@@ -29,7 +29,7 @@ public class Bronze {
 
 	JFrame frmBronze;
 	Cliente c1;
-	private EscopoInsert vProList;
+	EscopoInsert vProList;
 	private JTextField textField_vEnvio;
 	private String vTipo;
 	private Dados dados;
@@ -46,6 +46,12 @@ public class Bronze {
 	public Bronze(Dados dados) {
 		this.dados=dados;
 	}
+	public JFrame getFrmBronze() {
+		return frmBronze;
+	}
+	public void setFrmBronze(JFrame frmBronze) {
+		this.frmBronze = frmBronze;
+	}
 	public Bronze(Cliente c1) {
 		this.c1=c1;
 		initialize();
@@ -55,95 +61,95 @@ public class Bronze {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		setFrmBronze(new JFrame());
-		getFrmBronze().setTitle("Bronze");
-		getFrmBronze().setBounds(100, 100, 631, 331);
-		getFrmBronze().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getFrmBronze().getContentPane().setLayout(null);
-		getFrmBronze().setLocationRelativeTo(null);
+		frmBronze = new JFrame();
+		frmBronze.setTitle("Bronze");
+		frmBronze.setBounds(100, 100, 631, 331);
+		frmBronze.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBronze.getContentPane().setLayout(null);
+		frmBronze.setLocationRelativeTo(null);
 		
 		JLabel lblNewLabel = new JLabel("Tipo de Dado");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel.setBounds(10, 11, 141, 14);
-		getFrmBronze().getContentPane().add(lblNewLabel);
+		frmBronze.getContentPane().add(lblNewLabel);
 		
 		JLabel lblFormaDeEnvio = new JLabel("Forma de Envio");
 		lblFormaDeEnvio.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblFormaDeEnvio.setBounds(10, 96, 141, 14);
-		getFrmBronze().getContentPane().add(lblFormaDeEnvio);
+		frmBronze.getContentPane().add(lblFormaDeEnvio);
 		
 		JLabel lblQuantidadeRecebida = new JLabel("Prazo deDados Recebida");
 		lblQuantidadeRecebida.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblQuantidadeRecebida.setBounds(10, 155, 246, 14);
-		getFrmBronze().getContentPane().add(lblQuantidadeRecebida);
+		frmBronze.getContentPane().add(lblQuantidadeRecebida);
 		
 		JButton btnNewButton = new JButton("Prosseguir");
 
 		btnNewButton.setBounds(10, 258, 141, 23);
-		getFrmBronze().getContentPane().add(btnNewButton);
+		frmBronze.getContentPane().add(btnNewButton);
 		
 		final JCheckBox vDados_PDF = new JCheckBox("PDF");
 		vDados_PDF.setBounds(14, 32, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_PDF);
+		frmBronze.getContentPane().add(vDados_PDF);
 		
 		final JCheckBox vDados_JSON = new JCheckBox("JSON");
 		vDados_JSON.setBounds(113, 32, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_JSON);
+		frmBronze.getContentPane().add(vDados_JSON);
 		
 		final JCheckBox vDados_CSV = new JCheckBox("CSV");
 		vDados_CSV.setBounds(212, 32, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_CSV);
+		frmBronze.getContentPane().add(vDados_CSV);
 		
 		final JCheckBox vDados_Planilhas = new JCheckBox("Planilhas");
 		vDados_Planilhas.setBounds(311, 32, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_Planilhas);
+		frmBronze.getContentPane().add(vDados_Planilhas);
 		
 		final JCheckBox vDados_Tabelas = new JCheckBox("Tabelas");
 		vDados_Tabelas.setBounds(14, 58, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_Tabelas);
+		frmBronze.getContentPane().add(vDados_Tabelas);
 		
 		final JCheckBox vDados_Audio = new JCheckBox("Audio");
 		vDados_Audio.setBounds(113, 58, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_Audio);
+		frmBronze.getContentPane().add(vDados_Audio);
 		
 		final JCheckBox vDados_Texto = new JCheckBox("vDados_Texto");
 		vDados_Texto.setBounds(212, 58, 97, 23);
-		getFrmBronze().getContentPane().add(vDados_Texto);
+		frmBronze.getContentPane().add(vDados_Texto);
 		
 		final JCheckBox vOrigem_API = new JCheckBox("API");
 		vOrigem_API.setBounds(6, 117, 97, 23);
-		getFrmBronze().getContentPane().add(vOrigem_API);
+		frmBronze.getContentPane().add(vOrigem_API);
 		
 		final JCheckBox vOrigem_SFTP = new JCheckBox("SFTP");
 		vOrigem_SFTP.setBounds(105, 117, 97, 23);
-		getFrmBronze().getContentPane().add(vOrigem_SFTP);
+		frmBronze.getContentPane().add(vOrigem_SFTP);
 		
 		final JCheckBox vOrigem_Upload = new JCheckBox("Upload");
 		vOrigem_Upload.setBounds(204, 117, 97, 23);
-		getFrmBronze().getContentPane().add(vOrigem_Upload);
+		frmBronze.getContentPane().add(vOrigem_Upload);
 		
 		JButton btnRetorna = new JButton("Retorna");
 		btnRetorna.setBounds(160, 258, 141, 23);
-		getFrmBronze().getContentPane().add(btnRetorna);
+		frmBronze.getContentPane().add(btnRetorna);
 		
 		final JSpinner vContagem = new JSpinner();
 		vContagem.setBounds(10, 175, 44, 20);
-		getFrmBronze().getContentPane().add(vContagem);
+		frmBronze.getContentPane().add(vContagem);
 		
 		final JComboBox JComboBo_vData = new JComboBox();
 		JComboBo_vData.setModel(new DefaultComboBoxModel(new String[] {"<Selecione uma das op\u00E7\u00F5es>", "Dias", "Semanas", "Meses"}));
 		JComboBo_vData.setBounds(64, 174, 192, 22);
-		getFrmBronze().getContentPane().add(JComboBo_vData);
+		frmBronze.getContentPane().add(JComboBo_vData);
 		
 		textField_vEnvio = new JTextField();
 		textField_vEnvio.setBounds(10, 227, 246, 20);
-		getFrmBronze().getContentPane().add(textField_vEnvio);
+		frmBronze.getContentPane().add(textField_vEnvio);
 		textField_vEnvio.setColumns(10);
 		
 		JLabel lblQuantidadeRecebida_1 = new JLabel("Quantidade Recebida");
 		lblQuantidadeRecebida_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblQuantidadeRecebida_1.setBounds(10, 212, 174, 14);
-		getFrmBronze().getContentPane().add(lblQuantidadeRecebida_1);
+		frmBronze.getContentPane().add(lblQuantidadeRecebida_1);
 		
 		
 		//bot�o de prosseguir
@@ -211,8 +217,8 @@ public class Bronze {
 				
 				//Recebendo da quantidade  de dados
 				
-				c1.setvEnvio(textField_vEnvio.getText());
-				c1.setvPrazo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
+				dados.setvEnvio(textField_vEnvio.getText());
+				dados.setvTempo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
 				vTipo=vDadosListStr;
 				
 				//Armazenando o prazo de dados recebidos
@@ -236,8 +242,8 @@ public class Bronze {
 						"Produtos Selecionados:"+"\n"+
 						"Tipo de Dados Selecionado:"+vDadosList+"\n"+
 						"Forma de Envio Selecionado:"+vEnviarList+"\n"+
-						"Programa��o de envio de dados:"+c1.getvPrazo()+"\n"+
-						"Quantidade de Dados Recebido: "+c1.getvEnvio());
+						"Programa��o de envio de dados:"+dados.getvTempo()+"\n"+
+						"Quantidade de Dados Recebido: "+dados.getvEnvio());
 				}else {
 					JOptionPane.showMessageDialog(null,"Seleciona um  prazo valido ou Selecione todos os campos");
 				}
@@ -253,7 +259,7 @@ public class Bronze {
 							try {
 								EscopoInsert window2 = new EscopoInsert();
 								window2.getFrmEscopoInsert().setVisible(true);
-								getFrmBronze().setVisible(false);
+								frmBronze.setVisible(false);
 								
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -264,11 +270,5 @@ public class Bronze {
 				}
 			
 		});
-	}
-	public JFrame getFrmBronze() {
-		return frmBronze;
-	}
-	public void setFrmBronze(JFrame frmBronze) {
-		this.frmBronze = frmBronze;
 	}
 }

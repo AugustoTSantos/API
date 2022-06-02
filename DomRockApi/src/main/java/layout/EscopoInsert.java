@@ -401,8 +401,9 @@ public class EscopoInsert {
 							
 							try {
 								
-								 DaoCliente daoCriarCliente = new DaoCliente(); 
-								 daoCriarCliente.criarCl(c1);
+								/*
+								 * DaoCliente daoCriarCliente = new DaoCliente(); daoCriarCliente.criarCl(c1);
+								 */
 								//aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);
 								//aqui setamos a nova tela como visivel
